@@ -1,0 +1,22 @@
+{
+  "name": "ws-docker-security-action",
+  "version": "20.4.1",
+  "private": true,
+  "description": "WhiteSource docker image security scan action",
+  "main": "src/main.js",
+  "keywords": [
+    "actions",
+    "github",
+    "docker",
+    "whitesource",
+    "security"
+  ],
+  "author": "WhiteSource",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "@actions/core": "^1.1.1",
+    "@actions/github": "^1.1.0",
+    "@actions/exec": "^1.0.1",
+    "follow-redirects": "^1.9.0"
+  }
+}

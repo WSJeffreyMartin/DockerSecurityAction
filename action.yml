@@ -1,0 +1,42 @@
+name: 'Docker Security Scan'
+description: 'Find security vulnearbilities in docker images'
+author: 'WhiteSource'
+inputs:
+  ws-destination-url:
+      description: 'WS environment destination url'
+      required: true
+  ws-api-key:
+    description: 'WS organization api key'
+    required: true
+  ws-user-key:
+    description: 'WS user key'
+    required: true
+  ws-product-key:
+    description: 'WS product key to publish results to'
+    required: false
+  docker-image-identifier:
+    description: 'Name of the docker image to scan'
+    required: true
+  fail-on-policy-violations:
+    description: 'Whether to fail the workflow on policy violations'
+    required: false
+    default: false
+  print-scan-report:
+    description: 'Whether to print the results report'
+    required: false
+    default: false
+  actions_step_debug:
+    description: 'Whether to print debug logs'
+    required: false
+    default: false
+outputs:
+  scan-report-file-path:
+    description: 'Path of the scan report file'
+  scan-report-folder-path:
+    description: 'Path of the folder of the scan report file'
+runs:
+  using: 'node12'
+  main: 'src/main.js'
+branding:
+  icon: 'award'
+  color: 'green'
