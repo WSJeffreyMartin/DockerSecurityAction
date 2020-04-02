@@ -46,7 +46,7 @@ jobs:
         run: docker build . --file Dockerfile --tag DOCKER_IMAGE_NAME:DOCKER_IMAGE_VERSION
       - name: Docker Security Check Step
         id: docker-security-check
-        uses: whitesource/DockerSecurityAction@19.10.2
+        uses: whitesource/DockerSecurityAction@20.4.1
         with:
           docker-image-identifier: DOCKER_IMAGE_NAME:DOCKER_IMAGE_VERSION
           fail-on-policy-violations: true
